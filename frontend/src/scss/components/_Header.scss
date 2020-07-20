@@ -1,0 +1,76 @@
+#header {
+  position: fixed;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+
+  .menu-item {
+    text-align: center;
+    a {
+      transition: opacity .4s;
+      font-weight: bold;
+      opacity: .05;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+
+  .Wordmark, .hamburger {
+    position: absolute;
+    top: 0;
+  }
+  > * {
+    pointer-events: all;
+  }
+  // .home.active {
+  //   pointer-events: none;
+  // }
+  .Wordmark {
+    transition: transform $header-transition-time;
+    left: 0;
+    transform: translate(#{$padding-site-h-mobile-static}, #{$padding-site-v-mobile});
+    rect {
+      transition: fill $header-transition-time;
+    }
+  }
+  .hamburger {
+    transition: transform $header-transition-time;
+    right: -$padding-hamburger;
+    transform: translate(#{-$padding-site-h-mobile-static}, #{$padding-site-v-mobile});
+    .bar {
+      transition: background-color $header-transition-time, transform $header-transition-time;
+    }
+  }
+  @include mq-min($break-desktop) {
+    .Wordmark {
+      transform: translate(#{$padding-site-h-desktop}, #{$padding-site-v-desktop});
+    }
+    .hamburger {
+      transform: translate(#{-$padding-site-h-desktop}, #{$padding-site-v-desktop});
+    }
+  }
+
+  $color-schemes: (dark: $color-white, pink: $color-white, light: $color-black, test: #f00);
+  @each $color-scheme, $ui-color in $color-schemes {
+    &[data-color-scheme="#{$color-scheme}"] {
+      .Wordmark rect {
+        fill: $ui-color;
+      }
+      .hamburger .bar {
+        background-color: $ui-color;
+      }
+    }
+  }
+
+  &.dark, &.pink {
+    .Wordmark, .hamburger .bar {
+
+      // filter: drop-shadow( 0 0 1px rgba(0, 0, 0, .5));
+    }
+  }
+
+}

@@ -1,0 +1,31 @@
+.block {
+  // @include hilite(red);
+  .block-wrap {
+    // @include hilite(blue);
+    display: flex;
+    font-size: 10px;
+    padding: 0 $padding-site-h-mobile;
+    position: relative;
+    > .interior {
+      // @include hilite(green);
+      display: flex;
+      align-items: center;
+    }
+  }
+  .content {
+    font-size: $font-size-content;
+    font-weight: 300;
+  }
+}
+@import 'blocks/welcome';
+@import 'blocks/intro';
+@import 'blocks/image';
+@import 'blocks/gallery';
+@import 'blocks/logos';
+@import 'blocks/general';
+@import 'blocks/jumbotron';
+@import 'blocks/blockquote';
+@import 'blocks/contact';
+@import 'blocks/page-heading';
+@import 'blocks/project-pagination';
+@import 'blocks/archive';

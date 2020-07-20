@@ -1,0 +1,98 @@
+.hamburger {
+  $transition-time: .2s;
+  $bar-height: 4px;
+  $bar-drift: 4px;
+  $bar-indent-unit: 5px;
+
+  $translate-bar-top-x: 0;
+  $translate-bar-top-y: -2.5*$bar-height;
+
+
+  $translate-bar-middle-x: 2*$bar-indent-unit;
+  $translate-bar-middle-y: -50%;
+
+  $translate-bar-bottom-x: $bar-indent-unit;
+  $translate-bar-bottom-y: 1.5*$bar-height;
+
+
+  border: 0;
+  background: transparent;
+  padding: $padding-hamburger;
+  cursor: pointer;
+
+
+
+
+  .interior {
+    overflow: hidden;
+    position: relative;
+    transition: transform $transition-time*2;
+
+    &:before {
+      content: '';
+      display: block;
+      padding-top: 100%;
+      width: 30px;
+    }
+    .bar {
+
+
+      transition: transform $transition-time, opacity $transition-time, top $transition-time;
+      content: '';
+      background-color: $color-black;
+      display: block;
+      height: $bar-height;
+      left: 0;
+      position: absolute;
+      top: 50%;
+
+      width: 100%;
+
+
+
+      &:nth-child(1) {
+        transform: translate(#{$translate-bar-top-x}, #{$translate-bar-top-y});
+      }
+      &:nth-child(2) {
+        transform: translate(#{$translate-bar-middle-x, $translate-bar-middle-y});
+      }
+      &:nth-child(3) {
+        bottom: $bar-drift;
+        transform: translate(#{$translate-bar-bottom-x}, #{$translate-bar-bottom-y});
+      }
+    }
+
+  }
+  &:hover {
+    .bar:nth-child(2) {
+      transform: translate(0, #{$translate-bar-middle-y});
+    }
+    .bar:nth-child(3) {
+      bottom: $bar-drift;
+      transform: translate(0, #{$translate-bar-bottom-y});
+    }
+  }
+}
+
+@mixin hamburgerIconOpen() {
+  .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .bar:nth-child(1) {
+    transform: translate(0, -50%) rotate(45deg);
+  }
+  .bar:nth-child(3) {
+    transform: translate(0, -50%) rotate(-45deg);
+  }
+}
+
+[data-is-menu-open="true"] {
+  .hamburger > .interior {
+    @include hamburgerIconOpen();
+    &:hover {
+      transform: rotate(180deg);
+      @include hamburgerIconOpen();
+    }
+  }
+}

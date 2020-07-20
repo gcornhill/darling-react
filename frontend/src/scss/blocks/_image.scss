@@ -1,0 +1,17 @@
+.block.image {
+  $padding-block-v-mobile: 15px;
+  $padding-block-v-desktop: 25px;
+  &.type-hero .block-wrap {
+    padding: 0 !important;
+    > .interior, .img {
+      width: 100%;
+    }
+  }
+  &.type-portfolio .block-wrap {
+    transition: padding $header-transition-time;
+    padding: $padding-block-v-mobile $padding-site-h-mobile-static;
+    @include mq-min($break-desktop) {
+      padding: $padding-block-v-desktop $padding-site-h-desktop;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+#nav-main {
+  background: $color-black;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+  font-size: 10px;
+  a {
+    @include fancylink();
+    padding: .15em 0;
+    display: inline-block;
+  }
+  .Menu {
+    $duration-menu-slide-in: $header-transition-time;
+    $duration-fade-in: 1s;
+    $duration-fade-in-delay-unit: 100ms;
+
+    transition: transform $duration-menu-slide-in;
+    transform: translateX(#{$padding-site-h-mobile});
+    @include mq-min($break-desktop) {
+      transform: translateX(#{$padding-site-h-desktop});
+    }
+    .menu-item {
+      transition: opacity $duration-fade-in;
+      opacity: 0;
+      @for $idx from 1 through 5 {
+        &:nth-child(#{$idx}) {
+          transition-delay: $duration-menu-slide-in + $idx*$duration-fade-in-delay-unit - $duration-fade-in*0.25;
+        }
+      }
+      [data-is-menu-open="true"] & {
+        opacity: 1;
+      }
+
+    }
+  }
+}

@@ -1,0 +1,103 @@
+@import url("//hello.myfonts.net/count/3998fb");
+
+@font-face {font-family: 'trade-gothic';
+  src: url('../fonts/trade-gothic/700/tradeGothic-bold.eot');
+  src:  local('tradeGothic-bold'), url('../fonts/trade-gothic/700/tradeGothic-bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/trade-gothic/700/tradeGothic-bold.woff2') format('woff2'),
+  url('../fonts/trade-gothic/700/tradeGothic-bold.woff') format('woff'),
+  url('../fonts/trade-gothic/700/tradeGothic-bold.svg') format('svg');
+  font-weight: 700;
+}
+@font-face {font-family: 'trade-gothic';
+  src: url('../fonts/trade-gothic/400/tradeGothic-normal.eot');
+  src:  local('tradeGothic-normal'), url('../fonts/trade-gothic/400/tradeGothic-normal.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/trade-gothic/400/tradeGothic-normal.woff2') format('woff2'),
+  url('../fonts/trade-gothic/400/tradeGothic-normal.woff') format('woff'),
+  url('../fonts/trade-gothic/400/tradeGothic-normal.svg') format('svg');
+  font-weight: 400;
+}
+@font-face {font-family: 'trade-gothic';
+  src: url('../fonts/trade-gothic/300/3A6D2C_0_0.eot');
+  src:  local('tradeGothic-lighter'), url('../fonts/trade-gothic/300/3A6D2C_0_0.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/trade-gothic/300/3A6D2C_0_0.woff2') format('woff2'),
+  url('../fonts/trade-gothic/300/3A6D2C_0_0.woff') format('woff'),
+  url('../fonts/trade-gothic/300/3A6D2C_0_0.ttf') format('ttf');
+  font-weight: 300;
+}
+@font-face {font-family: 'trade-gothic-proheavy';
+  src: url('../fonts/trade-gothic-proheavy/3A854C_0_0.eot');
+  src:  local('tradeGothic-lighter'), url('../fonts/trade-gothic-proheavy/3A854C_0_0.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/trade-gothic-proheavy/3A854C_0_0.woff2') format('woff2'),
+  url('../fonts/trade-gothic-proheavy/3A854C_0_0.woff') format('woff'),
+  url('../fonts/trade-gothic-proheavy/3A854C_0_0.ttf') format('ttf');
+}
+@font-face {font-family: 'core-sans-heavy';
+  src: url('../fonts/core-sans/3A8543_0_0.eot');
+  src:  local('coresansHeavy'), url('../fonts/core-sans/3A8543_0_0.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/core-sans/3A8543_0_0.woff2') format('woff2'),
+  url('../fonts/core-sans/3A8543_0_0.woff') format('woff'),
+  url('../fonts/core-sans/3A8543_0_0.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'glyphter';
+    src: url('../fonts/glyphter/Glyphter.eot');
+    src: url('../fonts/glyphter/Glyphter.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/glyphter/Glyphter.woff') format('woff'),
+         url('../fonts/glyphter/Glyphter.ttf') format('truetype'),
+         url('../fonts/glyphter/Glyphter.svg#Glyphter') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.block.general .title,
+#Footer .copyright,
+body {
+  font-family: 'trade-gothic';
+}
+#nav-main,
+#Footer,
+.block.contact .go,
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6,
+.block.project-pagination,
+.title {
+  font-family: 'trade-gothic-proheavy';
+  letter-spacing: -.018em;
+}
+
+.logo-housing .text,
+.block.welcome .title,
+.page-title {
+  font-family: 'core-sans-heavy';
+}
+.BlockNext {
+  font-family: 'glyphter';
+}
+
+
+#nav-main .Menu,
+.block.project-pagination .go,
+#selector {
+  font-size: 7.0em;
+}
+
+.block.general .content h1,
+.block.general .content h2,
+.block.general .content h3,
+.block.general .content h4,
+.block.general .content h5,
+.block.general .content h6,
+#selector {
+  font-size: 42px;
+}
+
+
+.block.general .title,
+#selector {
+  font-size: 15px;
+}

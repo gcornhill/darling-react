@@ -1,0 +1,49 @@
+$color-black: #1f2633;
+$color-gray: #a9aaaf;
+$color-gray-dark: #666;
+$color-white: #ffffff;
+$color-pink: #ff006b;
+$color-tennisBall: #d4ff45;
+
+.color-scheme-light {
+  &, a {
+    color: $color-black;
+  }
+    fill: $color-black;
+  a::after {
+    background-color: $color-black;
+  }
+}
+.color-scheme-dark {
+  &, a {
+    color: $color-white;
+  }
+    fill: $color-white;
+  a::after {
+    background-color: $color-white;
+  }
+
+}
+#footer .copyright,
+.white {
+  color: $color-white;
+}
+
+.color-scheme-pink {
+  @extend .color-scheme-dark;
+  background-color: $color-pink;
+}
+.color-scheme-tennisBall {
+  @extend .color-scheme-light;
+  background-color: $color-tennisBall;
+}
+
+.block.general .title,
+.block.welcome .content,
+#selector {
+  color: $color-gray;
+}
+.block.blockquote cite,
+#selector {
+ color: $color-gray-dark;
+}

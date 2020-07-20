@@ -1,0 +1,73 @@
+.block.jumbotron {
+  @extend .color-scheme-dark;
+
+  padding: 0;
+  .block-wrap {
+    width: 100vw;
+  }
+  // Outer container is a link
+  .outer {
+    display: block;
+    position: absolute;
+    @include affix();
+    display: flex;
+    text-decoration: none;
+    > .inner {
+      font-size: 10px;
+      @include mq-min(1400px) {
+        font-size: 11.53846154px;
+      }
+
+
+
+
+      box-sizing: content-box;
+      padding: 0 $padding-site-h-mobile $padding-block-bottom;
+      align-self: flex-end;
+      width: 100%;
+
+
+      @include mq-min(1050px) {
+        align-self: center;
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  .title {
+    font-size: 42px;
+    @include mq-min(769px) {
+      font-size: 63px;
+    }
+    @include mq-min(1050px) {
+      font-size: 75px;
+    }
+    margin-bottom: .2em;
+  }
+  .content {
+    font-size: 2.1em;
+    line-height: 1.5;
+    margin-bottom: 1em;
+    max-width: 20em;
+  }
+  .go {
+    text-transform: uppercase;
+    font-size: 1.5em;
+    text-decoration: underline;
+    font-weight: 700;
+  }
+  .img {
+    &, > .inner {
+      @include affix();
+      position: absolute;
+      background-position: center;
+    }
+    z-index: -1;
+  }
+  // @include mq-min(545px) {
+  //   font-size: 1.8348624vw;
+  // }
+  // @include mq-min(777px) {
+  //   font-size: 14.2709px;
+  // }
+}

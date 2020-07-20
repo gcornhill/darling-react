@@ -1,0 +1,63 @@
+@mixin hilite($color:red) {
+  background-color: rgba($color, .25) !important;
+}
+@mixin mq-min($width) {
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}
+@mixin affix($top: 0, $right: 0, $bottom: 0, $left: 0) {
+  top: $top;
+  bottom: $bottom;
+  right: $right;
+  left: $left;
+}
+@mixin fancylink() {
+  text-decoration: none;
+  position: relative;
+  &:not(.active)::after {
+    transition: transform .2s ease;
+    content: '';
+    margin-top: 0.429411765em;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 0.117647059em;
+    transform: scaleX(0);
+    transform-origin: left center;
+  }
+  &:hover{
+    transform: scaleX(1);
+    &:after {
+      transform: scaleX(1);
+    }
+  }
+}
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+.rotating {
+  transform-origin: center center;
+  animation: rotating .25s linear infinite;
+}
+
+.full-height {
+  height: 100vh;
+}
+.full-height-margin-up {
+  margin-top: -100vh;
+}
