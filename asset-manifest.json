@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/darling-react/static/css/main.6f029d79.chunk.css",
+    "main.js": "/darling-react/static/js/main.90ac0b17.chunk.js",
+    "main.js.map": "/darling-react/static/js/main.90ac0b17.chunk.js.map",
+    "runtime~main.js": "/darling-react/static/js/runtime~main.a864f1ef.js",
+    "runtime~main.js.map": "/darling-react/static/js/runtime~main.a864f1ef.js.map",
+    "static/js/2.0a13ab78.chunk.js": "/darling-react/static/js/2.0a13ab78.chunk.js",
+    "static/js/2.0a13ab78.chunk.js.map": "/darling-react/static/js/2.0a13ab78.chunk.js.map",
+    "index.html": "/darling-react/index.html",
+    "precache-manifest.3159ff3f785293b093ba18d998d3ae57.js": "/darling-react/precache-manifest.3159ff3f785293b093ba18d998d3ae57.js",
+    "service-worker.js": "/darling-react/service-worker.js",
+    "static/css/main.6f029d79.chunk.css.map": "/darling-react/static/css/main.6f029d79.chunk.css.map",
+    "static/media/index.scss": "/darling-react/static/media/tradeGothic-normal.a26c67ab.woff"
+  }
+}
